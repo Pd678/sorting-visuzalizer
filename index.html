@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sorting Algorithm Visualizer</h1>
+  
+  <!-- Buttons -->
+  <div class="controls">
+    <button onclick="generateArray()">Generate Array</button>
+    <button onclick="showComplexity('Bubble Sort'); bubbleSort();">Bubble Sort</button>
+    <button onclick="showComplexity('Selection Sort'); selectionSort();">Selection Sort</button>
+    <button onclick="showComplexity('Insertion Sort'); insertionSort();">Insertion Sort</button>
+  </div>
+
+  <!-- Sliders -->
+  <div class="sliders">
+    <label>Array Size:</label>
+    <input type="range" id="arraySize" min="5" max="15" value="8" oninput="generateArray()">
+    
+    <label>Speed:</label>
+    <input type="range" id="speed" min="10" max="300" value="150">
+  </div>
+
+  <!-- Bars -->
+  <div id="bars-container"></div>
+
+  <!-- Complexity Info -->
+  <div id="complexity-container">
+    <h3>Time Complexity</h3>
+    <p id="algo-name">Algorithm: None</p>
+    <p id="best">Best Case: -</p>
+    <p id="average">Average Case: -</p>
+    <p id="worst">Worst Case: -</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
